@@ -22,9 +22,11 @@ module.exports = {
         loader: 'babel',
         exclude: '/node_modules',
         query: {
-          presets: ['es2015']
+          presets: ['es2015', 'react']
         }
-      }
+      },
+      { test: /\.css$/, loader: "style!css" },
+      { test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url' }
     ]
   }
 }
